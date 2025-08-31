@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom projects</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .subscribe_button{
+            border : none;
+            border-radius: 30px;
+            background-color: #000000;
+            color: aliceblue;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            cursor: pointer;
+            /* 
+            cursor: pointer;
+            ----------------
+            This changes the mouse cursor to a "hand" icon when hovering 
+            over the element. It's commonly used for buttons, links, or 
+            any clickable element to indicate that the user can click it.
+            */
+        }
+        .is-subscribed{
+            /*We added this below so the styles below override the styles above.*/
+            background-color:rgb(240, 240, 240);
+            color: black;
+        }
+        .cost-input{
+            font-size:15;
+            padding: 10px; /*adds 10px to every side*/
+        }
+        .calculate-button{
+            border : none;
+            font-size:15px;
+            padding: 12px 15px; 
+            color:#000000;
+            background-color:green ;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</P>
+    <button class =" js-subscribe_button subscribe_button"  
+    onclick = "subscribe()">Subscribe</button>
+
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input placeholder="Cost of order" class="js-cost_input cost-input" type="number" onkeydown="handelCostKeydown(event)">
+    <button onclick ="order()" class = "calculate-button">Calculate</button>
+    <p class="js-total_cost"></p>
+
+    <p>Rock paper Scissors</p>
+    <a href = "rock_paper_scissors.html">Click here</a>
+
+    
+    <script>
+        function handelCostKeydown(event){
+            console.log(event.key)
+            if (event.key === 'Enter'){
+                order();
+        }
+    }
+        function order(){
+            input_element = document.querySelector('.js-cost_input')
+            let cost = Number(input_element.value)
+            if(cost < 40){
+                cost += 10;
+            }
+            document.querySelector('.js-total_cost')
+            .innerHTML = `$${cost}`;
+        }
+        function  subscribe(){
+            const button_element = document.querySelector('.js-subscribe_button');
+            if (button_element.innerHTML === 'Subscribe'){
+                button_element.innerHTML = 'Subscribed';
+                button_element.classList.add('is-subscribed'); 
+            }else{
+                button_element.innerHTML = 'Subscribe';
+                button_element.classList.remove('is-subscribed');
+            }
+        } 
+
+    </script>
+</body>
+</html>

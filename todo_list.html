@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
-    <link rel = "stylesheet" href = "css/Todo_list.css">
+    <link rel="stylesheet" href="css/Todo_list.css">
 </head>
 <body>
-    <p>Todo list</p>
-    <input placeholder="Todo name" class="js-name-input">
-    <button onclick = "AddTodos()">Add</button>
-    <p class="js-name-output"></p>
-    <script src = "JavaScript/todo_list.js">
-    </script>
+    <p class="title">Todo list</p>
+    <div class="todo-input">
+        <input placeholder="Todo name" class="js-name-input name-input">
+        <input type="date" class="js-date-input date-input">
+        <button onclick="AddTodos()" class="button">Add</button>
+    </div>
+    <div class="js-name-output name-output"></div>
+    <script src="JavaScript/todo_list.js"></script>
 </body>
 </html>

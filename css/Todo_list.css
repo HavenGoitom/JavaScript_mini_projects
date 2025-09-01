@@ -1,0 +1,46 @@
+body {
+    font-style: italic;
+}
+.todos-date {
+    border: none;
+    padding: 10px;
+    background-color: rgb(166, 185, 166);
+    border-radius: 20px;
+}
+.todos-delete {
+    border: none;
+    padding: 10px;
+    background-color: rgb(175, 37, 37);
+    border-radius: 20px;
+    color: white;
+}
+.name-output, .todo-input {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    gap: 10px;
+    align-items: center;
+    margin-left: 105px;
+}
+.todo {
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+}
+.button {
+    border: none;
+    padding: 10px;
+    background-color: rgb(37, 175, 67);
+    border-radius: 20px;
+    color: white; 
+}
+input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgb(244, 252, 246);
+    color: black; 
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}

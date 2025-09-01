@@ -31,16 +31,23 @@ body {
     padding: 10px;
     background-color: rgb(37, 175, 67);
     border-radius: 20px;
-    color: white; 
+    color: white;
+    cursor: pointer; 
 }
 input {
     border: 1px solid #ccc;
     padding: 10px;
     background-color: rgb(244, 252, 246);
     color: black; 
+    margin-bottom: 10px;
 }
 .title {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
+}
+.todo-date{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
 }

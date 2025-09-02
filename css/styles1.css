@@ -1,40 +1,45 @@
-body{
-    background-color: rgb(25, 25, 25);
-    color:white;
-    font-family: Arial;
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
 }
-.title{
-    font-size: 30px;
-    font-weight: bold;
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
 }
-.move-icon{
-    width: 50px;
-    height: 50px; 
+
+.move-icon {
+  height: 50px;
 }
-.move-button{
-    width:120px;
-    height:120px;
-    margin-right: 10px;
-    border:3px solid white;
-    border-radius: 60px;
-    background-color:transparent;
-    cursor:pointer;
+
+.move-button {
+  background-color: transparent;
+  border: 3px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+  cursor: pointer;
 }
-.result{
-    font-size:25px;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
 }
-.score{
-    margin-top: 60px;
+
+.score {
+  margin-top: 60px;
 }
-.reset-score-button{
-    border:none;
+
+.reset-score-button,
+.auto-play-button {
     border-radius: 20px;
     padding:10px 15px;
     font-size: 15;
     background-color: rgb(214, 145, 16);
     color: white;
     font-weight:bold;
+    border: none;
 }

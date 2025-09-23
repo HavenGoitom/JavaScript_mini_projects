@@ -12,9 +12,14 @@ cart.forEach((cartItem)=>{
 
     products.forEach((product)=>{
         if (product.id === productId){
-            matchingProduct = product   
+            matchingProduct = product  
+            console.log(matchingProduct) 
         }
     })
+    // if (!matchingProduct) {
+    //     console.warn(`Product with id ${productId} not found in products array.`);
+    //     return; // Skip this cart item
+    // }
     cartSummaryHTML +=  `
     <div class="cart-item-container 
     js-cart-container-${matchingProduct.id}">

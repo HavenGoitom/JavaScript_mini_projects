@@ -102,7 +102,7 @@ xhr.addEventListener('load', () => {
   xhr.send();
 }
 
-loadProducts();
+// loadProducts();
 
 /*export const products = [
   {

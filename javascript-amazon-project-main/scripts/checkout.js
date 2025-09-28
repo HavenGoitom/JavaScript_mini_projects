@@ -5,7 +5,22 @@ import { loadCart } from '../data/cart.js';
 //import '../data/cart-class.js';
 //import '../data/backend-practice.js';
 
-Promise.all([
+async function loadPage(){
+    await loadProductsFetch();
+
+    const value = await new Promise((resolve) => {
+        loadCart(() => {
+            resolve();
+        });
+    });
+
+    renderOrderSummary();
+    renderPaymentSummary();
+}
+loadPage();
+
+// Using Promise.all
+/*Promise.all([
     loadProductsFetch(),
     new Promise((resolve) => {
         loadCart(() => {
@@ -16,7 +31,11 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
- 
+*/
+
+
+
+// Using Promise
 /*new Promise((resolve) => {
     loadProducts(()=>{
         resolve();
@@ -27,8 +46,6 @@ Promise.all([
             resolve();
         });
     });
-
- 
 }).then(() =>{
     renderOrderSummary();
     renderPaymentSummary();
@@ -36,14 +53,15 @@ Promise.all([
 .catch(() => {
     console.log('error')
 })
+*/
 
 
-
-// loadProducts(() => {
-//     loadCart(() => {
-//         renderOrderSummary();
-//         renderPaymentSummary();
-//     }); 
-// });
-
+//Using callbacks
+/*
+loadProducts(() => {
+    loadCart(() => {
+        renderOrderSummary();
+        renderPaymentSummary();
+    }); 
+});
 */
